@@ -34,21 +34,23 @@ export default function Navbar() {
                 </ul>
 
             </nav>
-            <div className={isMobileMenuOpen ? " ease-in duration-300 text-white h-screen flex items-center justify-center  w-screen  bg-black fixed top-0 left-0" : "  ease-in duration-300 h-screen  items-center justify-center  align-middle  bg-black text-white fixed top-0 left-[-100%] "}>
+            <div className={isMobileMenuOpen ? " ease-in duration-300 text-white h-screen    w-screen  bg-gray-800 fixed top-0 left-0 opacity-100 " : "  ease-in duration-300 h-screen   align-middle  bg-gray-600 text-white fixed top-0 left-[-100%] opacity-20 "}>
+                <div className="flex justify-end">
+                    <button className=" text-white m-3" onClick={toggleMobileMenu} >Close</button>
+                </div>
                 <ul className="text-white flex  h-screen w-screen justify-center flex-col items-center" >
-                    <li className='p-3 hover:text-neutral-300 '>
-                        <Link href={"/login"} >
+                    <li onClick={toggleMobileMenu} className='p-3 hover:text-neutral-300 '>
+                        <Link  href={"/login"} >
                             Login
                         </Link>
                     </li>
-                    <li className='p-3  hover:text-neutral-300'>
-                        <Link href={"/registration"} >
+                    <li onClick={toggleMobileMenu} className='p-3  hover:text-neutral-300'>
+                        <Link  href={"/registration"} >
                             Register
                         </Link>
                     </li>
                 </ul>
             </div>
-            <button className={isMobileMenuOpen ? "fixed right-2 top-2 text-white m-3  " : "fixed right-3 top-3 text-white m-3 hidden"} onClick={toggleMobileMenu} >Close</button>
         </>
     )
 }
