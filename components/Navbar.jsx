@@ -34,8 +34,8 @@ export default function Navbar() {
                 </ul>
 
             </nav>
-            <div className={isMobileMenuOpen ? "transition-[1s] text-white h-screen flex align-middle justify-center w-screen bg-black fixed top-0 left-0" : " transition-[1s] h-screen  align-middle justify-center bg-black text-white fixed top-0 left-0 hidden"}>
-                <ul className="text-white flex  h-screen w-screen justify-center align-middle" >
+            <div className={isMobileMenuOpen ? " ease-in duration-300 text-white h-screen flex items-center justify-center  w-screen  bg-black fixed top-0 left-0" : "  ease-in duration-300 h-screen  items-center justify-center  align-middle  bg-black text-white fixed top-0 left-[-100%] "}>
+                <ul className="text-white flex  h-screen w-screen justify-center flex-col items-center" >
                     <li className='p-3 hover:text-neutral-300 '>
                         <Link href={"/login"} >
                             Login
