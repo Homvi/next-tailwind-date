@@ -1,9 +1,10 @@
 import React from 'react'
-import styles from '../styles/Registration.module.css'
 
 const registration = () => {
     return (
-        <div>registration</div>
+        <>
+            <h1 className='text-3xl flex justify-center m-3' >Regisztráció</h1>
+        </>
     )
 }
 
