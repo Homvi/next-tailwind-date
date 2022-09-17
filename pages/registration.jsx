@@ -10,14 +10,14 @@ const registration = () => {
     return (
         <>
             <h1 className='text-3xl flex justify-center m-3 relative z-0'  >Regisztráció</h1>
-            <form action={handleSubmit} className="max-w-[700px] relative z-0 drop-shadow-sm bg-slate-100 p-5 flex flex-col mx-auto" >
+            <form action="#" className="max-w-[700px] relative z-0 drop-shadow-sm bg-slate-100 p-5 flex flex-col mx-auto" >
                 <input type="text" placeholder='Vezetéknév' className='drop-shadow-md p-2 mt-1 mx-5' />
                 <input type="text" placeholder='Keresztnév' className='drop-shadow-md p-2 mt-1 mx-5' />
                 <input type="text" placeholder='felhasználónév' className='drop-shadow-md p-2 mt-1 mx-5' />
                 <input type="email" placeholder='e-mail' className='drop-shadow-md p-2 mt-1 mx-5' />
-                <input type="password" placeholder='Válassz jelszót' className='drop-shadow-md p-2 mt-1 mx-5' />
+                <input autoComplete='true' type="password" placeholder='Válassz jelszót' className='drop-shadow-md p-2 mt-1 mx-5' />
                 <div className="form-check flex justify-center  m-4 p-2 ">
-                    <label className="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                    <label className="form-check-label inline-block text-gray-800" htmlFor="flexCheckDefault">
                         Elolvastam és elfogadom az <span className='underline decoration-1' ><Link href="/termsofuse"  > Felhasználási feltételeket </Link></span> és az <span className='underline decoration-1' ><Link href="/privacypolicy">adatkezelési tájékoztató</Link></span> ban leírtakat.
                     </label>
                     <div className="check flex flex-col justify-end">
