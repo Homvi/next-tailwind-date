@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { validateEmail } from "./validation"
+import { validateEmail } from "../validation"
 
 const login = () => {
 
