@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { validateEmail } from "../validation"
 
 const login = () => {
 
@@ -41,7 +40,7 @@ const login = () => {
 
     return (
         <>
-            <form action="#" className="max-w-[700px] relative z-0 drop-shadow-sm bg-slate-100 p-5 flex flex-col mx-auto xs:p-5 sm:mt-5" >
+            <form action="#" className="max-w-[700px] h-screen relative z-0 drop-shadow-sm bg-slate-100 p-5 flex flex-col mx-auto sm:mt-10  sm:h-fit" >
                 <h1 className='text-3xl flex justify-center m-3 relative z-0'  >Bejelentkezés</h1>
                 <div className="mb-2">
                     <label htmlFor="emailInput" className="block mb-2 text-sm font-medium">E-mail</label>

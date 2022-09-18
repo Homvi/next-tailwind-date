@@ -17,7 +17,7 @@ const registration = () => {
 
     return (
         <>
-            <form action="#" className="max-w-[700px] relative z-0 drop-shadow-sm bg-slate-100 p-5 flex flex-col mx-auto xs:p-5 sm:mt-5 " >
+            <form action="#" className="max-w-[700px] relative z-0 drop-shadow-sm bg-slate-100 p-5 flex flex-col mx-auto xs:p-5 sm:mt-10" >
 
                 <h1 className='text-3xl flex justify-center m-3 relative z-0'  >Regisztráció</h1>
 
