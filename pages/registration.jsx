@@ -1,20 +1,34 @@
 import Link from 'next/link';
-import React from 'react'
+import React, { useState } from 'react'
+import { validateEmail } from "../validation"
 
 const registration = () => {
 
+    const [email, setEmail] = useState("")
+
     const handleSubmit = () => {
         console.log("The form has been submitted");
+    }
+
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+        validateEmail("registrationEmailInput")
     }
 
     return (
         <>
             <h1 className='text-3xl flex justify-center m-3 relative z-0'  >Regisztráció</h1>
             <form action="#" className="max-w-[700px] relative z-0 drop-shadow-sm bg-slate-100 p-5 flex flex-col mx-auto" >
+                <div className="mb-2">
+                    <label htmlFor="lastNameInput" className="block mb-2 text-sm font-medium">Vezetéknév</label>
+                    <input type="text" id="lastNameInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Vezetéknév" />
+                    <p className="mt-2 text-sm text-red-600 dark:text-red-500 hidden"><span className="font-medium">Oops!</span> A név mező kitöltése kötelező!
+                    </p>
+                </div>
                 <input type="text" placeholder='Vezetéknév' className='drop-shadow-md p-2 mt-1 mx-5' />
                 <input type="text" placeholder='Keresztnév' className='drop-shadow-md p-2 mt-1 mx-5' />
                 <input type="text" placeholder='felhasználónév' className='drop-shadow-md p-2 mt-1 mx-5' />
-                <input type="email" placeholder='e-mail' className='drop-shadow-md p-2 mt-1 mx-5' />
+                <input type="email" id='registrationEmailInput' value={email} onChange={e => handleEmail(e)} placeholder='e-mail' className='drop-shadow-md p-2 mt-1 mx-5' />
                 <input autoComplete='true' type="password" placeholder='Válassz jelszót' className='drop-shadow-md p-2 mt-1 mx-5' />
                 <div className="form-check flex justify-center  m-4 p-2 ">
                     <label className="form-check-label inline-block text-gray-800" htmlFor="flexCheckDefault">

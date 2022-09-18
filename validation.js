@@ -17,10 +17,12 @@ const validateEmail = (elementId) => {
   if (isValid) {
     emailInput.classList.add("shadow-[0_0px_0px_3px_#a5f48ad6]");
     emailInput.classList.remove("shadow-[0_0px_0px_3px_#ff505041]");
+    console.log("The email is valid");
   }
   if (!isValid) {
     emailInput.classList.remove("shadow-[0_0px_0px_3px_#a5f48ad6]");
     emailInput.classList.add("shadow-[0_0px_0px_3px_#ff505041]");
+    console.log("The email is NOT valid");
   }
   return isValid;
 };
