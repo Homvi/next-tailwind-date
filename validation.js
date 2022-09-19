@@ -27,4 +27,17 @@ const validateEmail = (elementId) => {
   return isValid;
 };
 
-export { validateEmail };
+
+const toggleAlert = (idOfInput, idOfAlert) => {
+  let alert = document.getElementById(idOfAlert);
+  let Input = document.getElementById(idOfInput);
+  let length = Input.value.toString().length;
+  if (length < 2) {
+    alert.classList.remove("hidden");
+  }
+  if (length >= 2) {
+    alert.classList.add("hidden");
+  }
+};
+
+export { validateEmail, toggleAlert };

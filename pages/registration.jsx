@@ -1,18 +1,35 @@
 import Link from 'next/link';
 import React, { useState } from 'react'
-import { validateEmail } from "../validation"
+import { validateEmail, toggleAlert } from "../validation"
+
 
 const registration = () => {
+
+    const toggleAlert = (idOfInput, idOfAlert) => {
+        let alert = document.getElementById(idOfAlert)
+        let Input = document.getElementById(idOfInput)
+        let length = Input.value.toString().length
+        if (length < 2) {
+            alert.classList.remove("hidden")
+        }
+        if (length >= 2) {
+            alert.classList.add("hidden")
+        }
+    }
 
     const [email, setEmail] = useState("")
 
     const handleSubmit = () => {
-        console.log("The form has been submitted");
+        toggleAlert('lastNameInput', "lastNameAlertReg")
+        toggleAlert('FirstNameInput', "firstNameAlertReg")
+        toggleAlert('userNameInput', "userNameAlertReg")
+        toggleAlert('emailInput', "emailAlertReg")
+        toggleAlert('passwordInput', "passwordAlertReg")
     }
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
-        validateEmail("registrationEmailInput")
+        validateEmail("emailInput")
     }
 
     return (
@@ -25,7 +42,7 @@ const registration = () => {
                 <div className="mb-2">
                     <label htmlFor="lastNameInput" className="block mb-2 text-sm font-medium">Vezetéknév</label>
                     <input type="text" id="lastNameInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Vezetéknév" />
-                    <p className="mt-2 text-sm text-red-600 dark:text-red-500 hidden"><span className="font-medium">Hoppá!</span> A vezeténév mező kitöltése kötelező!
+                    <p id='lastNameAlertReg' className="mt-2 text-sm text-red-600 dark:text-red-500 hidden"><span className="font-medium">Hoppá!</span> A vezeténév mező kitöltése kötelező!
                     </p>
                 </div>
 
@@ -33,7 +50,7 @@ const registration = () => {
                 <div className="mb-2">
                     <label htmlFor="FirstNameInput" className="block mb-2 text-sm font-medium">Keresztnév</label>
                     <input type="text" id="FirstNameInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Keresznév" />
-                    <p className="mt-1 text-sm text-red-600 dark:text-red-500 hidden"><span className="font-medium">Hoppá!</span> A keresztnév megadása kötelező!
+                    <p id='firstNameAlertReg' className="mt-1 text-sm text-red-600 dark:text-red-500 hidden"><span className="font-medium">Hoppá!</span> A keresztnév megadása kötelező!
                     </p>
                 </div>
 
@@ -41,7 +58,7 @@ const registration = () => {
                 <div className="mb-2">
                     <label htmlFor="userNameInput" className="block mb-2 text-sm font-medium">Felhasználónév</label>
                     <input type="text" id="userNameInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Válassz felhasználónevet!" />
-                    <p className="mt-1 text-sm text-red-600 dark:text-red-500 hidden"><span className="font-medium">Hoppá!&nbsp;</span> Ez a felhasználónév már foglat!
+                    <p id='userNameAlertReg' className="mt-1 text-sm text-red-600 dark:text-red-500 hidden"><span className="font-medium">Hoppá!&nbsp;</span> Ez a felhasználónév már foglat!
                     </p>
                 </div>
 
@@ -49,7 +66,7 @@ const registration = () => {
                 <div className="mb-2">
                     <label htmlFor="emailInput" className="block mb-2 text-sm font-medium">E-mail</label>
                     <input value={email} onChange={e => handleEmail(e)} type="email" id="emailInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="example@example.com" />
-                    <p className="mt-1 text-sm text-red-600 dark:text-red-500 hidden">Kérlek adj meg egy valódi e-mail címet ahol elérhetünk!
+                    <p id='emailAlertReg' className="mt-1 text-sm text-red-600 dark:text-red-500 hidden">Kérlek adj meg egy valódi e-mail címet ahol elérhetünk!
                     </p>
                 </div>
 
@@ -57,7 +74,7 @@ const registration = () => {
                 <div className="mb-2">
                     <label htmlFor="passwordInput" className="block mb-2 text-sm font-medium">Jelszó</label>
                     <input autoComplete='true' type="password" id="passwordInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Jelszó" />
-                    <p className="mt-1 text-sm text-red-600 dark:text-red-500 hidden">A jelszónak legalább 5 karakter hosszúnak kell lennie és tartalmaznia kell nagybetűt és kisbetűt valamint számot.
+                    <p id='passwordAlertReg' className="mt-1 text-sm text-red-600 dark:text-red-500 hidden">A jelszónak legalább 5 karakter hosszúnak kell lennie és tartalmaznia kell nagybetűt és kisbetűt valamint számot.
                     </p>
                 </div>
 
@@ -66,8 +83,8 @@ const registration = () => {
                     <label className="form-check-label inline-block text-gray-800" htmlFor="flexCheckDefault">
                         Elolvastam és elfogadom az <span className='underline decoration-1' ><Link href="/termsofuse"  > Felhasználási feltételeket </Link></span> és az <span className='underline decoration-1' ><Link href="/privacypolicy">adatkezelési tájékoztató</Link></span> ban leírtakat.
                     </label>
-                    <label class="inline-flex items-center mt-3">
-                        <input type="checkbox" class="form-checkbox h-5 w-5 text-pink-600" /><span class="ml-2 text-gray-700"></span>
+                    <label className="inline-flex items-center mt-3">
+                        <input type="checkbox" className="form-checkbox h-5 w-5 text-pink-600" /><span className="ml-2 text-gray-700"></span>
                     </label>
                 </div>
 
