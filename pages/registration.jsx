@@ -66,9 +66,9 @@ const registration = () => {
                     <label className="form-check-label inline-block text-gray-800" htmlFor="flexCheckDefault">
                         Elolvastam és elfogadom az <span className='underline decoration-1' ><Link href="/termsofuse"  > Felhasználási feltételeket </Link></span> és az <span className='underline decoration-1' ><Link href="/privacypolicy">adatkezelési tájékoztató</Link></span> ban leírtakat.
                     </label>
-                    <div className="check flex flex-col justify-end">
-                        <input className="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckDefault" />
-                    </div>
+                    <label class="inline-flex items-center mt-3">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-pink-600" /><span class="ml-2 text-gray-700"></span>
+                    </label>
                 </div>
 
                 {/* Submit Button */}
