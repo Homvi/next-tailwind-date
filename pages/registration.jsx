@@ -42,7 +42,7 @@ const registration = () => {
                 <div className="mb-2">
                     <label htmlFor="lastNameInput" className="block mb-2 text-sm font-medium">Vezetéknév</label>
                     <input type="text" id="lastNameInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Vezetéknév" />
-                    <p id='lastNameAlertReg' className="mt-2 text-sm text-red-600 dark:text-red-500 hidden"><span className="font-medium">Hoppá!</span> A vezeténév mező kitöltése kötelező!
+                    <p id='lastNameAlertReg' className="mt-2 text-sm text-red-600 dark:text-red-500 hidden"> A vezeténév mező kitöltése kötelező!
                     </p>
                 </div>
 
