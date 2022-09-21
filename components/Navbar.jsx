@@ -35,7 +35,7 @@ export default function Navbar() {
                 </ul>
 
             </nav>
-            <div className={isMobileMenuOpen ? " ease-out duration-300 text-white h-screen z-10   w-screen  bg-gray-800 fixed top-0 left-0  " : "ease-out duration-300 h-screen  z-10  align-middle  bg-gray-600 text-white fixed top-0 left-[-100%]"}>
+            <div className={isMobileMenuOpen ? " ease-out duration-300 text-white h-screen z-10   w-screen  bg-gray-800 fixed top-0 left-0  " : "ease-out duration-300 h-screen  z-10  align-middle  bg-gray-600 text-white fixed top-0 left-[-150%]"}>
                 <div className="flex justify-end">
                     <AiOutlineClose size={30} className="cursor-pointer text-white m-3" onClick={toggleMobileMenu} >Close</AiOutlineClose>
                 </div>
