@@ -17,8 +17,8 @@ export default function handler(req, res) {
       },
       {
         id: 2,
-        lastName: "Jane",
-        firstName: "Doe",
+        lastName: "Ayaka",
+        firstName: "Hitomi",
         age: 23,
         email: "janedoe@example.com",
         gender: false,
@@ -49,7 +49,7 @@ export default function handler(req, res) {
         desc: "Megtaláltad akit keresel. Minden elvárásodnak megfelelek.",
         city: "Pornóapáti",
         profilePhoto:
-          "https://images.pexels.com/photos/6163215/pexels-photo-6163215.jpeg?cs=srgb&dl=pexels-jasmin-chew-6163215.jpg&fm=jpg",
+          "https://images.pexels.com/photos/1674324/pexels-photo-1674324.jpeg?cs=srgb&dl=pexels-mart%C3%AD-pardo-1674324.jpg&fm=jpg",
       },
     ],
   });
