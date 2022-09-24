@@ -1,17 +1,7 @@
 import Footer from "../components/Footer";
 import Link from "next/link";
 
-export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/hello");
-  const data = await res.json();
-
-  return {
-    props: { users: data.users },
-  };
-};
-
-export default function Home({ users }) {
-  console.log(users);
+export default function Home() {
   return (
     <>
       <section className="py-24 flex items-center min-h-screen justify-center bg-white">

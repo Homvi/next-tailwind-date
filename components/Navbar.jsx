@@ -32,6 +32,11 @@ export default function Navbar() {
                             Regisztráció
                         </Link>
                     </li>
+                    <li className='p-3  hover:text-neutral-300'>
+                        <Link href={"/users"} >
+                            Felhasználók
+                        </Link>
+                    </li>
                 </ul>
 
             </nav>
@@ -48,6 +53,11 @@ export default function Navbar() {
                     <li onClick={toggleMobileMenu} className='p-3  hover:text-neutral-300'>
                         <Link href={"/registration"} >
                             Regisztráció
+                        </Link>
+                    </li>
+                    <li onClick={toggleMobileMenu} className='p-3  hover:text-neutral-300'>
+                        <Link href={"/users"} >
+                            Felhasználók
                         </Link>
                     </li>
                 </ul>
