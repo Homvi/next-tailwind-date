@@ -1,18 +1,17 @@
 import Footer from "../components/Footer";
 import Link from "next/link";
-import { useEffect } from "react";
 
-export default function Home() {
-  const fetchUsers = async () => {
-    fetch("http://localhost:3000/api/hello")
-      .then((data) => data.json())
-      .then((json) => console.log(json));
+export const getStaticProps = async () => {
+  const res = await fetch("http://localhost:3000/api/hello");
+  const data = await res.json();
+
+  return {
+    props: { users: data.users },
   };
+};
 
-  useEffect(() => {
-    fetchUsers();
-  }, []);
-
+export default function Home({ users }) {
+  console.log(users);
   return (
     <>
       <section className="py-24 flex items-center min-h-screen justify-center bg-white">
