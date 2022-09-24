@@ -1,18 +1,17 @@
 import React from 'react'
+import Image from 'next/image'
 
 const User = ({ user }) => {
     return (
         <>
-            <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-[7rem]">
+            <div className="relative bg-slate-100 shadow-2xl max-w-md mx-auto md:max-w-2xl min-w-0 break-words w-full mb-6 rounded-xl mt-[7rem]">
                 <div className="px-6">
-                    <div className="flex flex-wrap justify-center ">
-                        <div className="w-full flex justify-center">
-                            <div className="relative flex justify-center">
-                                <img alt='image' src={user.profilePhoto} className="shadow-xl rounded-full align-middle border-none absolute -m-16  lg:-ml-16 max-w-[150px] max-h-[150px]" />
-                            </div>
-                        </div>
-                        <div className="w-full text-center mt-20">
-                            <div className="flex justify-center lg:pt-4 pt-8 pb-0">
+                    <div className="flex w-full relative">
+                        <div className="flex w-full justify-center relative">
+                            <div className="flex w-full relative justify-center ">
+                                <div className="relative shadow-2xl mt-[-80px] h-40 w-40 rounded-full bg-black">
+                                    <Image layout='fill' objectFit='cover' alt='image' src={user.profilePhoto} className=" rounded-full align-middle border-none absolute -m-16  lg:-ml-16 max-w-[150px] max-h-[150px]" />
+                                </div>
                             </div>
                         </div>
                     </div>
