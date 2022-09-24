@@ -5,11 +5,15 @@ export default function handler(req, res) {
     users: [
       {
         id: 1,
-        lastName: "Joe",
-        firstName: "Doe",
+        lastName: "Kiss",
+        firstName: "Andrea",
         age: 19,
         email: "joedoe@example.com",
-        gender: true,
+        gender: false,
+        desc: "Szeretek horgászva sörözni, szörfölni a színek tengerén...",
+        city: "Sopron",
+        profilePhoto:
+          "https://images.pexels.com/photos/1624229/pexels-photo-1624229.jpeg?cs=srgb&dl=pexels-croft-alexander-1624229.jpg&fm=jpg",
       },
       {
         id: 2,
@@ -18,6 +22,10 @@ export default function handler(req, res) {
         age: 23,
         email: "janedoe@example.com",
         gender: false,
+        desc: "A legkedvesebb ételem a kirántotthús",
+        city: "Kőszeg",
+        profilePhoto:
+          "https://images.pexels.com/photos/8422522/pexels-photo-8422522.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-8422522.jpg&fm=jpg",
       },
       {
         id: 3,
@@ -26,6 +34,10 @@ export default function handler(req, res) {
         age: 40,
         email: "nagygeza@example.com",
         gender: true,
+        desc: "A természet törvényei felett állok, futás közben pihenek",
+        city: "Aszópuszta",
+        profilePhoto:
+          "https://images.pexels.com/photos/7561906/pexels-photo-7561906.jpeg?cs=srgb&dl=pexels-vazhnik-7561906.jpg&fm=jpg",
       },
       {
         id: 4,
@@ -34,6 +46,10 @@ export default function handler(req, res) {
         age: 33,
         email: "example@example.com",
         gender: false,
+        desc: "Megtaláltad akit keresel. Minden elvárásodnak megfelelek.",
+        city: "Pornóapáti",
+        profilePhoto:
+          "https://images.pexels.com/photos/6163215/pexels-photo-6163215.jpeg?cs=srgb&dl=pexels-jasmin-chew-6163215.jpg&fm=jpg",
       },
     ],
   });

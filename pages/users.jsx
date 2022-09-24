@@ -13,7 +13,7 @@ export const getStaticProps = async () => {
 const users = ({ users }) => {
     return (
         <>
-            <h1 className="text-center text-xl p-5">Users</h1>
+            <h1 className="text-center text-xl p-5">Felhasználók</h1>
             {users && users.map((user, id) => (<User user={user} key={id} />)
             )}
         </>
