@@ -17,7 +17,7 @@ export default function Navbar() {
         <>
             <nav className='flex justify-between align-middle bg-gray-800 text-white' >
                 <Link href={"/"}>
-                    <h1 className='p-3 text-xl border-l hover:cursor-pointer' >DateNow</h1>
+                    <h1 className='p-3 text-xl hover:cursor-pointer' >DateNow</h1>
                 </Link>
                 <AiOutlineMenu size={30} className="text-white m-3 md:hidden" onClick={toggleMobileMenu} />
 
