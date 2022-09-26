@@ -3,7 +3,6 @@ import User from '../components/User';
 
 export const getServerSideProps = async () => {
     const res = await fetch("https://next-date.netlify.app/api/hello");
-    // const res = await fetch("http://localhost:3000/api/hello");
     let data = await res.json();
 
     return {
