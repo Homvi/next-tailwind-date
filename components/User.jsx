@@ -4,7 +4,7 @@ import Image from 'next/image'
 const User = ({ user }) => {
     return (
         <>
-            <div className="relative bg-slate-100 shadow-2xl max-w-md mx-auto md:max-w-2xl min-w-0 break-words w-full mb-6 rounded-xl mt-[7rem]">
+            <div className="relative bg-white/90 shadow-2xl max-w-md mx-auto md:max-w-2xl min-w-0 break-words w-full mb-6 rounded-xl mt-[7rem]">
                 <div className="px-6">
                     <div className="flex w-full relative">
                         <div className="flex w-full justify-center relative">

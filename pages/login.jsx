@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Image from 'next/image'
+import BCG from "../public/assets/img/bcg.svg"
 
 const login = () => {
 
@@ -40,8 +42,8 @@ const login = () => {
 
     return (
         <>
-            <form action="#" className="max-w-[700px] h-screen relative z-0 drop-shadow-sm bg-slate-100 p-5 flex flex-col mx-auto sm:mt-10  sm:h-fit" >
-                <h1 className='text-3xl flex justify-center m-3 relative z-0'  >Bejelentkezés</h1>
+            <form action="#" className="max-w-[700px] h-screen relative text-gray-900   z-20 drop-shadow-sm bg-white/90  p-5 flex flex-col  mx-auto sm:mt-10  sm:h-fit md:rounded-lg" >
+                <h1 className='text-3xl flex justify-center m-3 text-gray-900/90 uppercase  relative z-0 mt-5'  >Bejelentkezés</h1>
                 <div className="mb-2">
                     <label htmlFor="emailInput" className="block mb-2 text-sm font-medium">E-mail</label>
                     <input value={email} onChange={e => handleEmail(e)} type="email" id="emailInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="example@example.com" />
@@ -60,6 +62,9 @@ const login = () => {
                     <button onClick={handleSubmit} type="button" className="inline-block px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-600 active:shadow-lg transition duration-150 ease-in-out">Bejelentkezés</button>
                 </div>
             </form>
+            <div id="background" className="h-[110%] w-screen absolute top-0 left-0 z-[10] bg-black ">
+                <Image layout="fill" objectFit='cover' alt='image' src={BCG} />
+            </div>
         </>
     )
 }

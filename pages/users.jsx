@@ -13,8 +13,7 @@ export const getServerSideProps = async () => {
 const users = ({ users }) => {
     return (
         <>
-            <h1 className="text-center text-xl p-5">Regisztrált felhasználók</h1>
-            <div className="p-3  grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3 max-w-[1240px] mx-auto">
+            <div className="p-3 bg-white grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3 max-w-[1240px] mx-auto">
                 {users && users.map((user, id) => {
                     return (
                         <>

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React, { useState } from 'react'
 import { validateEmail, toggleAlert } from "../validation"
+import Image from 'next/image'
+import BCG from "../public/assets/img/bcg.svg"
 
 
 const registration = () => {
@@ -34,9 +36,9 @@ const registration = () => {
 
     return (
         <>
-            <form action="#" className="max-w-[700px] relative z-0 drop-shadow-sm bg-slate-100 p-5 flex flex-col mx-auto xs:p-5 sm:mt-10" >
+            <form action="#" className="max-w-[700px] text-gray-900  relative  z-20 drop-shadow-sm bg-white/90 p-5 flex flex-col mx-auto xs:p-5 sm:mt-10 md:rounded-lg" >
 
-                <h1 className='text-3xl flex justify-center m-3 relative z-0'  >Regisztráció</h1>
+                <h1 className='text-3xl text-gray-900/90 uppercase flex justify-center m-3 relative z-0'  >Regisztráció</h1>
 
                 {/*  Last name */}
                 <div className="mb-2">
@@ -94,6 +96,10 @@ const registration = () => {
                 </div>
 
             </form>
+            <div id="background" className="h-[110%] w-screen absolute top-0 left-0 z-[10] bg-black ">
+                <Image layout="fill" objectFit='cover' alt='image' src={BCG} />
+            </div>
+
         </>
     )
 }
