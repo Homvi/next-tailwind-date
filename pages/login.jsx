@@ -62,7 +62,7 @@ const login = () => {
                     <button onClick={handleSubmit} type="button" className="transform rounded-md bg-[#ea030f] hover:text-red-900 px-5 py-3 font-medium text-white transition-colors hover:bg-white/90 duration-300">Bejelentkezés</button>
                 </div>
             </form>
-            <div id="background" className="h-[110%] w-screen absolute top-0 left-0 z-[10] bg-black ">
+            <div id="background" className="h-[140%] w-screen absolute top-0 left-0 z-[10] bg-black ">
                 <Image layout="fill" objectFit='cover' alt='image' src={BCG} />
             </div>
         </>
