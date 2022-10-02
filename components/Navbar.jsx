@@ -19,7 +19,7 @@ export default function Navbar() {
         <>
             <nav className='flex z-30 overflow-hidden shadow-lg relative w-screen justify-between align-middle bg-white/90 text-gray-900' >
                 <Link href={"/"}>
-                    <div id="logoContainer" className='h-max mx-4 w-[70px] flex my-auto cursor-pointer'>
+                    <div id="logoContainer" className='h-max mx-1 w-[70px] flex my-auto p-3 cursor-pointer'>
                         <Image objectFit='contain' alt='image' src={Logo} />
                     </div>
                 </Link>
