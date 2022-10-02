@@ -9,11 +9,10 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>DateNow</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name='description' content='Találd meg a párod akár perceken belül' />ó
+        <meta name='description' content='Találd meg a párod akár perceken belül' />
       </Head>
       <Navbar />
       <Component {...pageProps} />
-      <Footer />
     </>
   )
 }
