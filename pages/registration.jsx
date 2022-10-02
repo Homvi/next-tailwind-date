@@ -96,7 +96,7 @@ const registration = () => {
                 </div>
 
             </form>
-            <div id="background" className="h-[130%] w-screen absolute top-0 left-0 z-[10] bg-black ">
+            <div id="background" className="h-[180%] w-screen absolute top-0 left-0 z-[10] bg-black ">
                 <Image layout="fill" objectFit='cover' alt='image' src={BCG} />
             </div>
 
