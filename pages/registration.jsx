@@ -92,11 +92,11 @@ const registration = () => {
 
                 {/* Submit Button */}
                 <div className="flex space-x-2 justify-center">
-                    <button onClick={handleSubmit} type="button" className="inline-block px-8 py-3 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-600 active:shadow-lg transition duration-150 ease-in-out">Regisztrálok</button>
+                    <button onClick={handleSubmit} type="button" className="transform rounded-md bg-[#ea030f]  px-5 py-3 font-medium text-white transition-colors  duration-300">Regisztrálok</button>
                 </div>
 
             </form>
-            <div id="background" className="h-[110%] w-screen absolute top-0 left-0 z-[10] bg-black ">
+            <div id="background" className="h-[130%] w-screen absolute top-0 left-0 z-[10] bg-black ">
                 <Image layout="fill" objectFit='cover' alt='image' src={BCG} />
             </div>
 

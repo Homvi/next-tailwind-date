@@ -8,7 +8,7 @@ import BCG from "../public/assets/img/bcg.svg"
 export default function Home() {
   return (
     <>
-     <div id="background" className="h-[110%] w-screen absolute top-0 left-0 z-[10] bg-black ">
+     <div id="background" className="h-[150%] w-screen absolute top-0 left-0 z-[10] bg-black ">
         <Image layout="fill" objectFit='cover' alt='image' src={BCG} />
       </div>
       <section className="py-24 flex items-center overflow-y-hidden min-h-screen justify-center relative z-20">

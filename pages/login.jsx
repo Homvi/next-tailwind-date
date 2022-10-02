@@ -59,7 +59,7 @@ const login = () => {
                 <p id='wrongPassOrEmailAlert' className="mt-1 text-sm text-red-600 dark:text-red-500 text-center hidden">Helytelen felhasználónév vagy jelszó
                 </p>
                 <div className="flex space-x-2 justify-center mt-5">
-                    <button onClick={handleSubmit} type="button" className="inline-block px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-600 active:shadow-lg transition duration-150 ease-in-out">Bejelentkezés</button>
+                    <button onClick={handleSubmit} type="button" className="transform rounded-md bg-[#ea030f] hover:text-red-900 px-5 py-3 font-medium text-white transition-colors hover:bg-white/90 duration-300">Bejelentkezés</button>
                 </div>
             </form>
             <div id="background" className="h-[110%] w-screen absolute top-0 left-0 z-[10] bg-black ">
