@@ -8,6 +8,12 @@ import BCG from "../public/assets/img/bcg.svg"
 const registration = () => {
 
     const [email, setEmail] = useState("")
+    const [lastName, setLastName] = useState("")
+    const [firstName, setFirstName] = useState("")
+    const [userName, setUserName] = useState("")
+    const [password, setPassword] = useState("")
+    const [isCheckBoxChecked, setIsCheckBoxChecked] = useState(false)
+    const [newUser, setNewUser] = useState({});
 
     const handleSubmit = () => {
         toggleAlert('lastNameInput', "lastNameAlertReg")
@@ -15,11 +21,49 @@ const registration = () => {
         toggleAlert('userNameInput', "userNameAlertReg")
         toggleAlert('emailInput', "emailAlertReg")
         toggleAlert('passwordInput', "passwordAlertReg")
+
+
+        let newUserObj = {
+            lastName: lastName,
+            firstName: firstName,
+            userName: userName,
+            email: email,
+            password: password
+        }
+
+        setNewUser(newUserObj)
+
+        console.log(newUser);
     }
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
         validateEmail("emailInput")
+    }
+
+    const handleLastName = (e) => {
+        setLastName(e.target.value)
+        console.log("The lastname is: ", lastName);
+    }
+
+    const handleFirstName = (e) => {
+        setFirstName(e.target.value)
+        console.log("The firstname is: ", firstName);
+    }
+
+    const handleUserName = (e) => {
+        setUserName(e.target.value)
+        console.log("The username is: ", userName);
+    }
+
+    const handlePassword = (e) => {
+        setPassword(e.target.value)
+        console.log("The password is: ", password);
+    }
+
+    const handleCheckBox = (e) => {
+        setIsCheckBoxChecked(e.target.checked)
+        console.log("The checkbox is checked? : ", isCheckBoxChecked);
     }
 
     return (
@@ -31,7 +75,7 @@ const registration = () => {
                 {/*  Last name */}
                 <div className="mb-2">
                     <label htmlFor="lastNameInput" className="block mb-2 text-sm font-medium">Vezetéknév</label>
-                    <input type="text" id="lastNameInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Vezetéknév" />
+                    <input value={lastName} onChange={e => handleLastName(e)} type="text" id="lastNameInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Vezetéknév" />
                     <p id='lastNameAlertReg' className="mt-2 text-sm text-red-600 dark:text-red-500 hidden"> A vezeténév mező kitöltése kötelező!
                     </p>
                 </div>
@@ -39,7 +83,7 @@ const registration = () => {
                 {/* First name */}
                 <div className="mb-2">
                     <label htmlFor="FirstNameInput" className="block mb-2 text-sm font-medium">Keresztnév</label>
-                    <input type="text" id="FirstNameInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Keresznév" />
+                    <input value={firstName} onChange={e => handleFirstName(e)} type="text" id="FirstNameInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Keresznév" />
                     <p id='firstNameAlertReg' className="mt-1 text-sm text-red-600 dark:text-red-500 hidden"><span className="font-medium">Hoppá!</span> A keresztnév megadása kötelező!
                     </p>
                 </div>
@@ -47,7 +91,7 @@ const registration = () => {
                 {/* username */}
                 <div className="mb-2">
                     <label htmlFor="userNameInput" className="block mb-2 text-sm font-medium">Felhasználónév</label>
-                    <input type="text" id="userNameInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Válassz felhasználónevet!" />
+                    <input value={userName} onChange={e => handleUserName(e)} type="text" id="userNameInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Válassz felhasználónevet!" />
                     <p id='userNameAlertReg' className="mt-1 text-sm text-red-600 dark:text-red-500 hidden"><span className="font-medium">Hoppá!&nbsp;</span> Ez a felhasználónév már foglat!
                     </p>
                 </div>
@@ -63,7 +107,7 @@ const registration = () => {
                 {/* Password */}
                 <div className="mb-2">
                     <label htmlFor="passwordInput" className="block mb-2 text-sm font-medium">Jelszó</label>
-                    <input autoComplete='true' type="password" id="passwordInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Jelszó" />
+                    <input value={password} onChange={e => handlePassword(e)} autoComplete='true' type="password" id="passwordInput" className=" text-sm rounded-lg  block w-full p-2.5" placeholder="Jelszó" />
                     <p id='passwordAlertReg' className="mt-1 text-sm text-red-600 dark:text-red-500 hidden">A jelszónak legalább 5 karakter hosszúnak kell lennie és tartalmaznia kell nagybetűt és kisbetűt valamint számot.
                     </p>
                 </div>
@@ -74,7 +118,7 @@ const registration = () => {
                         Elolvastam és elfogadom az <span className='underline decoration-1' ><Link href="/termsofuse"  > Felhasználási feltételeket </Link></span> és az <span className='underline decoration-1' ><Link href="/privacypolicy">adatkezelési tájékoztató</Link></span> ban leírtakat.
                     </label>
                     <label className="inline-flex items-center mt-3">
-                        <input type="checkbox" className="form-checkbox h-5 w-5 text-pink-600" /><span className="ml-2 text-gray-700"></span>
+                        <input onChange={e => handleCheckBox(e)} type="checkbox" className="form-checkbox h-5 w-5 text-pink-600" /><span className="ml-2 text-gray-700"></span>
                     </label>
                 </div>
 
