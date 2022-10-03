@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { validateEmail, toggleAlert } from "../validation"
 import Image from 'next/image'
 import BCG from "../public/assets/img/bcg.svg"
@@ -22,7 +22,6 @@ const registration = () => {
         toggleAlert('emailInput', "emailAlertReg")
         toggleAlert('passwordInput', "passwordAlertReg")
 
-
         let newUserObj = {
             lastName: lastName,
             firstName: firstName,
@@ -30,10 +29,7 @@ const registration = () => {
             email: email,
             password: password
         }
-
         setNewUser(newUserObj)
-
-        console.log(newUser);
     }
 
     const handleEmail = (e) => {
@@ -43,28 +39,28 @@ const registration = () => {
 
     const handleLastName = (e) => {
         setLastName(e.target.value)
-        console.log("The lastname is: ", lastName);
     }
 
     const handleFirstName = (e) => {
         setFirstName(e.target.value)
-        console.log("The firstname is: ", firstName);
     }
 
     const handleUserName = (e) => {
         setUserName(e.target.value)
-        console.log("The username is: ", userName);
     }
 
     const handlePassword = (e) => {
         setPassword(e.target.value)
-        console.log("The password is: ", password);
     }
 
     const handleCheckBox = (e) => {
         setIsCheckBoxChecked(e.target.checked)
-        console.log("The checkbox is checked? : ", isCheckBoxChecked);
     }
+
+    useEffect(() => {
+        console.log(newUser);
+    }, [newUser])
+
 
     return (
         <>
