@@ -60,7 +60,7 @@ const registration = () => {
     useEffect(() => {
         console.log(newUser);
         console.log("The checkbox is checked ?", isCheckBoxChecked);
-    }, [newUser])
+    }, [newUser, isCheckBoxChecked])
 
 
     return (
