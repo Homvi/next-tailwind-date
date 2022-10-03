@@ -17,7 +17,7 @@ const users = ({ users }) => {
                 {users && users.map((user, id) => {
                     return (
                         <>
-                            <User user={user} key={id} />
+                            <User user={user} key={user.id} />
                         </>
                     )
                 })

@@ -7,18 +7,6 @@ import BCG from "../public/assets/img/bcg.svg"
 
 const registration = () => {
 
-    const toggleAlert = (idOfInput, idOfAlert) => {
-        let alert = document.getElementById(idOfAlert)
-        let Input = document.getElementById(idOfInput)
-        let length = Input.value.toString().length
-        if (length < 2) {
-            alert.classList.remove("hidden")
-        }
-        if (length >= 2) {
-            alert.classList.add("hidden")
-        }
-    }
-
     const [email, setEmail] = useState("")
 
     const handleSubmit = () => {

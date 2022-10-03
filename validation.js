@@ -40,4 +40,5 @@ const toggleAlert = (idOfInput, idOfAlert) => {
   }
 };
 
+
 export { validateEmail, toggleAlert };
